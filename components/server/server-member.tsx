@@ -27,7 +27,10 @@ export const ServerMember = ({
     const icon = roleIconMap[member.role];
 
     const onCick = () => {
-        router.push(`/servers/${params.serverId}/conversations/${member.id}`)
+        //router.push(`/servers/${params.serverId}/conversations/${member.id}`)
+        if(params) {
+            router.push(`/servers/${params.serverId}/conversations/${member.id}`)
+        }
     }
 
     return (
